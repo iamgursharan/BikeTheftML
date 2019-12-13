@@ -25,7 +25,7 @@ def main():
     # Writing data to streamlit
     if st.checkbox('View Data'):
         st.write(data)
-    st.subheader("Map of lost bikes")
+    st.subheader("Map")
     if st.checkbox('View Map'):
         status=st.selectbox('Select status',data.status.unique())
         hour=st.selectbox('Select hour',data.occurrence_time.unique())
@@ -34,6 +34,7 @@ def main():
         st.map(data_map)
         total_count=data_map.status.count()
         st.text('Total count: %s' %  total_count)
+    st.subheader("Visualization")    
     if st.checkbox('Visualize'):
         visualize_data(data)
     
