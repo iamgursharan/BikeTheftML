@@ -1,1 +1,1 @@
-web: streamlit run BikeTheft.py
+web: sh setup.sh && streamlit run biketheft.py
